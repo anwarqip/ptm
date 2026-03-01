@@ -39,6 +39,10 @@
       "expo-sqlite"
     ],
     "owner": "anwarqip",
-
+    "extra": {
+      "eas": {
+        "projectId": "abe2bb59-6c8f-4532-82c9-0e171aacc99e"
+      }
+    }
   }
 }
