@@ -1,29 +1,48 @@
 {
   "expo": {
-    "name": "PtmMobNew",
-    "slug": "PtmMobNew",
-    "version": "1.0.0",
+    "name": "PTM",
+    "slug": "PtmMob",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "We need access to your camera to scan QR codes"
+      }
     },
     "android": {
+      "usesCleartextTraffic": true,
+      "permissions": [
+        "CAMERA"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "et.gov.aatb.ptms"
     },
+    "package": "et.gov.aatb.ptms",
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-sqlite"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "abe2bb59-6c8f-4532-82c9-0e171aacc99e"
+      }
+    },
+    "owner": "anwarqip"
   }
 }
